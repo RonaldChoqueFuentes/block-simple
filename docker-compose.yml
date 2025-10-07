@@ -1,0 +1,6 @@
+services:
+  nodejs-app:
+    build: ./app
+    container_name: mi-nodejs-app
+    ports:
+      - "8080:3000"
