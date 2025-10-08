@@ -44,3 +44,94 @@ docker compose up
 
 ##  Config File for postgrest
 [SQL INIT](config/init.sql)
+
+
+
+### 1. Título y Descripción
+
+```markdown
+# Block Simple
+
+It is node js api  to list  update and create users 
+
+**Curso:** Docker & Kubernetes - Clase 3
+**Estudiante:** Ronald Choque Fuentes
+**Fecha:** 10/08/2025
+```
+
+### 2. Stack Tecnológico
+
+Lista las tecnologías usadas:
+
+```markdown
+## Stack Tecnológico
+
+- **Backend:** Node.js + Express .
+- **Base de datos:** PostgreSQL 15 c.
+```
+
+### 3. Arquitectura
+
+Diagrama o descripción de la arquitectura:
+
+```markdown
+## Arquitectura
+
+It use two services and nodeapp and db.  those are connected by common network.
+the database use  a env file variables to set and  deploy the database.
+
+Servicios:
+- `app`: Puerto 8080, conectado a db 
+- `db`: PostgreSQL, solo accesible desde app
+
+```
+
+Puedes incluir un diagrama ASCII o imagen.
+
+### 4. Requisitos Previos
+
+```markdown
+## Requisitos
+
+- Docker Desktop o Docker Engine
+- Docker Compose
+- Git
+```
+
+### 5. Instalación y Uso
+
+Instrucciones paso a paso:
+
+```markdown
+## Instalación
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/RonaldChoqueFuentes/block-simple.git
+   cd block-simple
+   ```
+
+2. update default enviroment variables  :
+ 
+
+3. Levantar servicios:
+   ```bash
+   docker compose up -d
+   ```
+
+4. Acceder a la aplicación:
+   - API: http://localhost:8080
+   - postgres database address: http://db:5432
+```
+
+### 6. Endpoints / Funcionalidad
+
+Documenta cómo usar tu aplicación:
+
+```markdown
+## Endpoints
+
+- `GET /` - default response
+- `GET /users` - Listar items
+- `GET /users/:id` - Listar items
+- `POST /users/:id` - Crear item
