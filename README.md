@@ -1,9 +1,9 @@
-## block-simple
+# block-simple
 
--- sample node js code use to create the docker compose
--- https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/
+- sample node js code use to create the docker compose
+- https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/
 
-#  common command to clean docker
+##  common command to clean docker
 
 
 ```bash
@@ -15,14 +15,14 @@ docker volume rm :id
 docker network rm :id
 
 ```
-#  start docker componse
+##  start docker componse
 
 ```bash
 docker compose up
 
 ```
 
-# endpoint
+## endpoint
 
 - http://localhost:8080/
 - http://localhost:8080/users
@@ -30,17 +30,17 @@ docker compose up
 
 ![alt text](screenshots/image.png)
 
-# docker compose File
+## docker compose File
 [docker compose File](docker-compose.yml)
 
-# docker File
+## docker File
 [node js docker file](app/Dockerfile)
 
-# enviroment file variables for postgres
+## enviroment file variables for postgres
 [postgres variables](.env)
 
-# Api endpoints
+## Api endpoints
 [endpoint](app/queries.js)
 
-#  Config File for postgrest
+##  Config File for postgrest
 [SQL INIT](config/init.sql)
