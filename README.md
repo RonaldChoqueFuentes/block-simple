@@ -128,7 +128,28 @@ Documenta cómo usar tu aplicación:
 
 ## endpoint Screenshoots
 
-- http://localhost:8080/users
+- http://localhost:8080
 
-![alt text](screenshots/image.png)
+![default](screenshots/image-6.png)
 
+- GET http://localhost:8080/users
+
+![list users](screenshots/image.png)
+
+![alt text](screenshots/image-2.png)
+
+- GET http://localhost:8080/users/1
+
+![get user by id](screenshots/image-1.png)
+
+- POST http://localhost:8080/users?name=ronald&email=ron.todo.poderoso@gmail.com
+
+![alt text](screenshots/image-3.png)
+
+- PUT http://localhost:8080/users/3?name=javier
+
+![alt text](screenshots/image-4.png)
+
+- DELETE http://localhost:8080/users/2
+
+![alt text](screenshots/image-5.png)
