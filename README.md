@@ -1,9 +1,26 @@
 # block-simple
 
-- sample node js code use to create the docker compose
+
+### 1. Título y Descripción
+
+sample node js code use to create the docker compose
 - https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/
 
-##  common command to clean docker
+```markdown
+
+# Block Simple
+
+It is node js api  to list  update and create users 
+
+
+**Curso:**  Docker & Kubernetes - Clase 3
+**Estudiante:**  Ronald Choque Fuentes
+**Fecha:** 10/08/2025
+
+```
+
+
+### Common Command to clean docker
 
 
 ```bash
@@ -14,49 +31,6 @@ docker rmi $(docker images -q)
 docker volume rm :id
 docker network rm :id
 
-```
-##  start docker componse
-
-```bash
-docker compose up
-
-```
-
-## endpoint
-
-- http://localhost:8080/
-- http://localhost:8080/users
-- http://localhost:8080/users/:id
-
-![alt text](screenshots/image.png)
-
-## docker compose File
-[docker compose File](docker-compose.yml)
-
-## docker File
-[node js docker file](app/Dockerfile)
-
-## enviroment file variables for postgres
-[postgres variables](.env)
-
-## Api endpoints
-[endpoint](app/queries.js)
-
-##  Config File for postgrest
-[SQL INIT](config/init.sql)
-
-
-
-### 1. Título y Descripción
-
-```markdown
-# Block Simple
-
-It is node js api  to list  update and create users 
-
-**Curso:** Docker & Kubernetes - Clase 3
-**Estudiante:** Ronald Choque Fuentes
-**Fecha:** 10/08/2025
 ```
 
 ### 2. Stack Tecnológico
@@ -87,6 +61,18 @@ Servicios:
 ```
 
 Puedes incluir un diagrama ASCII o imagen.
+
+## docker compose File
+[docker compose File](docker-compose.yml)
+
+## docker File
+[node js docker file](app/Dockerfile)
+
+## enviroment file variables for postgres
+[postgres variables](.env)
+
+##  Config File for postgrest
+[SQL INIT](config/init.sql)
 
 ### 4. Requisitos Previos
 
@@ -122,7 +108,8 @@ Instrucciones paso a paso:
 4. Acceder a la aplicación:
    - API: http://localhost:8080
    - postgres database address: http://db:5432
-```
+
+
 
 ### 6. Endpoints / Funcionalidad
 
@@ -132,6 +119,16 @@ Documenta cómo usar tu aplicación:
 ## Endpoints
 
 - `GET /` - default response
-- `GET /users` - Listar items
-- `GET /users/:id` - Listar items
-- `POST /users/:id` - Crear item
+- `GET /users` - Listar users
+- `GET /users/:id` - get a user
+- `POST /users` -  create a user
+- `PUT /users/:id'` -  update a user
+- `DELETE /users/:id'` -  delete a user
+```
+
+## endpoint Screenshoots
+
+- http://localhost:8080/users
+
+![alt text](screenshots/image.png)
+
