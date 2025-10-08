@@ -31,7 +31,8 @@ RUN npm ci --only=production && \
     npm cache clean --force
 
 # Copiar código desde stage de build
-COPY --from=build /app/app.js ./
+COPY --from=build /app/index.js ./
+COPY --from=build /app/queries.js ./
 
 # Cambiar ownership de los archivos al usuario nodejs
 RUN chown -R nodejs:nodejs /app
@@ -51,4 +52,4 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD node -e "require('http').get('http://localhost:3000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
 
 # Comando para iniciar la aplicación
-CMD ["node", "app.js"]
+CMD ["node", "index.js"]
